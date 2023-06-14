@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LinkLoader Popup</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        min-width: 300px;
+        min-height: 200px;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        margin-top: 0;
+        text-align: center;
+        color: #333;
+      }
+      ul {
+        margin-top: 20px;
+        padding-left: 0;
+        max-height: 150px;
+        overflow-y: scroll;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+      }
+      li {
+        list-style-type: none;
+        margin-bottom: 5px;
+      }
+      a {
+        text-decoration: none;
+        color: #0066cc;
+        word-break: break-all;
+      }
+      .link-item {
+        display: flex;
+        align-items: center;
+      }
+      .link-item input[type="text"] {
+        margin-right: 10px;
+        flex-grow: 1;
+        padding: 5px;
+        border: none;
+        background-color: #f2f2f2;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #333;
+      }
+      .link-item .delete-button,
+      .link-item .copy-button {
+        margin-left: 10px;
+        cursor: pointer;
+        background-color: #0066cc;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      .link-item .delete-button:hover,
+      .link-item .copy-button:hover {
+        background-color: #004d99;
+      }
+      #add-link-container {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+      }
+      #add-link-input {
+        margin-right: 10px;
+        flex-grow: 1;
+        padding: 5px;
+        border: none;
+        background-color: #f2f2f2;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #333;
+      }
+      #add-link-button {
+        cursor: pointer;
+        background-color: #0066cc;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      #add-link-button:hover {
+        background-color: #004d99;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LinkLoader</h1>
+
+    <ul id="link-list">
+      <!-- Links will be dynamically added here -->
+    </ul>
+
+    <div id="add-link-container">
+      <input type="text" id="add-link-input" placeholder="Enter URL">
+      <button id="add-link-button">Add Link</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
